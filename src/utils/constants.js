@@ -21,7 +21,7 @@ export const tags = [
   'source 2',
 ];
 
-export const REACT_APP_GOOGLE_API_KEY_1 = 'AIzaSyDpkAHUEbaKcSO20gmPKKOumNI17YCT2S0';
+export const REACT_APP_GOOGLE_API_KEY_1 = process.env.REACT_APP_GOOGLE_API_KEY_1;
 
 //expects a key in the end
 export const YOUTUBE_MOST_POPULAR = 'https://youtube.googleapis.com/youtube/v3';
