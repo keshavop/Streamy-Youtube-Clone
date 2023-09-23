@@ -7,7 +7,7 @@ module.exports = {
       fontFamily: {
         Roboto: ["Roboto", "sans-serif"],
       },
-      backgroundSize: {
+       backgroundSize: {
         64: "64rem",
       },
       animation: {

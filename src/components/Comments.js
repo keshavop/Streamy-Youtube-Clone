@@ -4,7 +4,6 @@ import Comment from "./Comment";
 import { FaUserCircle } from "react-icons/fa";
 import loadingGif from "../assests/loading-state.gif";
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { REACT_APP_GOOGLE_API_KEY_1 } from "../utils/constants";
 
 const Comments = ({ videoId, commentCount }) => {
 
@@ -12,7 +11,9 @@ const Comments = ({ videoId, commentCount }) => {
   const getComments = async (nextPageToken = "") => {
     const response = await fetch(
       BASE_URL +
-        `/commentThreads?part=snippet%2Creplies&order=relevance&key=${REACT_APP_GOOGLE_API_KEY_1}&videoId=${videoId}&textFormat=plainText&pageToken=${
+        `/commentThreads?part=snippet%2Creplies&order=relevance&key=${
+          process.env.REACT_APP_GOOGLE_API_KEY_1
+        }&videoId=${videoId}&textFormat=plainText&pageToken=${
           nextPageToken ?? ""
         }`
     );

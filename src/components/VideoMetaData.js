@@ -4,7 +4,6 @@ import { BiLike, BiDislike } from "react-icons/bi";
 import { TfiShare, TfiDownload, TfiMoreAlt } from "react-icons/tfi";
 import moment from "moment";
 import { useQuery } from "@tanstack/react-query";
-import { REACT_APP_GOOGLE_API_KEY_1 } from "../utils/constants";
 
 const VideoMetaData = ({ videoDetails, channelId }) => {
   const [desc, setDesc] = useState(true);
@@ -13,7 +12,7 @@ const VideoMetaData = ({ videoDetails, channelId }) => {
   const get_channel_details = async () => {
     const response = await fetch(
       BASE_URL +
-        `/channels?part=snippet%2Cstatistics%2CcontentDetails&id=${channelId}&key=${REACT_APP_GOOGLE_API_KEY_1}`
+        `/channels?part=snippet%2Cstatistics%2CcontentDetails&id=${channelId}&key=${process.env.REACT_APP_GOOGLE_API_KEY_6}`
     );
     const data = await response.json();
     return data.items[0];

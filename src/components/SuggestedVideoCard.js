@@ -2,7 +2,6 @@ import { useQuery } from '@tanstack/react-query';
 import { decode } from 'html-entities';
 import moment from 'moment';
 import { BASE_URL } from '../utils/constants';
-import { REACT_APP_GOOGLE_API_KEY_1 } from "../utils/constants";
 
 
 const SuggestedVideoCard = ({ video }) => {
@@ -25,7 +24,7 @@ const SuggestedVideoCard = ({ video }) => {
   const getVideoViewsAndDuration = async () => {
     const response = await fetch(
       BASE_URL +
-        `/videos?part=contentDetails%2Cstatistics&id=${videoId}&key=${REACT_APP_GOOGLE_API_KEY_1}`
+        `/videos?part=contentDetails%2Cstatistics&id=${videoId}&key=${process.env.REACT_APP_GOOGLE_API_KEY_2}`
     );
     const data = await response.json();
     return data.items[0];

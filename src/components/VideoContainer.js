@@ -8,7 +8,6 @@ import { BASE_URL } from "./../utils/constants";
 import { Link } from "react-router-dom";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import useIntersectionObserver from "./../utils/useIntersectionObserver";
-import { REACT_APP_GOOGLE_API_KEY_1 } from "../utils/constants";
 
 const VideoContainer = () => {
   const category = useSelector((store) => store.videosCategory.category);
@@ -46,7 +45,7 @@ const VideoContainer = () => {
           `/videos?part=snippet%2CcontentDetails%2Cstatistics&maxResults=8&chart=mostPopular&regionCode=IN&pageToken=${
             nextPageToken ?? ""
           }&videoDuration=medium&key=` +
-          REACT_APP_GOOGLE_API_KEY_1
+          process.env.REACT_APP_GOOGLE_API_KEY_4
       );
       const data = await response.json();
       return data;
@@ -81,7 +80,7 @@ const VideoContainer = () => {
         BASE_URL +
           `/search?part=snippet&maxResults=8&type=video&q=${searchText}&pageToken=${
             nextPageToken ?? ""
-          }&videoDuration=medium&key=${REACT_APP_GOOGLE_API_KEY_1}`
+          }&videoDuration=medium&key=${process.env.REACT_APP_GOOGLE_API_KEY_7}`
       );
       const data = await response.json();
       if (!response.ok) {

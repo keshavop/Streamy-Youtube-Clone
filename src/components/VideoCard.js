@@ -3,7 +3,6 @@ import { BASE_URL } from "./../utils/constants";
 import { GiAerialSignal } from "react-icons/gi";
 import { decode } from "html-entities";
 import { useQuery } from "@tanstack/react-query";
-import { REACT_APP_GOOGLE_API_KEY_1 } from "../utils/constants";
 
 const VideoCard = ({ video }) => {
   const {
@@ -35,7 +34,7 @@ const VideoCard = ({ video }) => {
   const getVideoViewsAndDuration = async () => {
     const response = await fetch(
       BASE_URL +
-        `/videos?part=contentDetails%2Cstatistics&id=${_videoId}&key=${REACT_APP_GOOGLE_API_KEY_1}`
+        `/videos?part=contentDetails%2Cstatistics&id=${_videoId}&key=${process.env.REACT_APP_GOOGLE_API_KEY_3}`
     );
     const data = await response.json();
     return data.items[0];
@@ -74,7 +73,7 @@ const VideoCard = ({ video }) => {
   const get_channel_icon = async () => {
     const response = await fetch(
       BASE_URL +
-        `/channels?part=snippet&id=${channelId}&key=${REACT_APP_GOOGLE_API_KEY_1}`
+        `/channels?part=snippet&id=${channelId}&key=${process.env.REACT_APP_GOOGLE_API_KEY_10}`
     );
     const data = await response.json();
     return data?.items?.[0]?.snippet?.thumbnails?.default?.url;

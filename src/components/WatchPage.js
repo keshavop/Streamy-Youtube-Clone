@@ -8,7 +8,6 @@ import VideoSuggestions from "./VideoSuggestions";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSideBar } from "../utils/appSlice";
 import { useQuery } from "@tanstack/react-query";
-import { REACT_APP_GOOGLE_API_KEY_1 } from "../utils/constants";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -46,7 +45,7 @@ const WatchPage = () => {
   const getVideoDetail = async () => {
     const response = await fetch(
       BASE_URL +
-        `/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${REACT_APP_GOOGLE_API_KEY_1}`
+        `/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${process.env.REACT_APP_GOOGLE_API_KEY_9}`
     );
     const data = await response.json();
     return data.items[0];
