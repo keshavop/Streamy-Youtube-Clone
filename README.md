@@ -16,7 +16,6 @@
 - Vercel hosting
 
 
-## 🌐 Explore the Demo: https://lnkd.in/dg5tPgv2
-## 🧑‍💻 Explore on GitHub: https://lnkd.in/dtVJMPQE
-
+## 🌐 Explore the Demo: https://streamyyt.vercel.app
+## 🧑‍💻 Explore on GitHub: https://lnkd.in/dtVJMPQEhttps://github.com/keshavop/Streamy-Youtube-Clone
 ### Streamy represents the future of video streaming platforms. We've combined the latest technologies, including React.js, Redux Toolkit, React Query, and Tailwind CSS, to create a user-centric, feature-rich application that mirrors the best of YouTube.
