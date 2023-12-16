@@ -17,5 +17,5 @@
 
 
 ## 🌐 Explore the Demo: https://streamyyt.vercel.app
-## 🧑‍💻 Explore on GitHub: https://lnkd.in/dtVJMPQEhttps://github.com/keshavop/Streamy-Youtube-Clone
+## 🧑‍💻 Explore on GitHub: https://github.com/keshavop/Streamy-Youtube-Clone
 ### Streamy represents the future of video streaming platforms. We've combined the latest technologies, including React.js, Redux Toolkit, React Query, and Tailwind CSS, to create a user-centric, feature-rich application that mirrors the best of YouTube.
